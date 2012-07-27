@@ -1,5 +1,5 @@
 Name:                dvda
-Version:             0.2.2
+Version:             0.2.3
 License:             BSD3
 License-file:        LICENSE
 Author:              Greg Horn
@@ -78,9 +78,11 @@ Library
                      MutableDvda.Expr
                      MutableDvda.FullShow
                      MutableDvda.Graph
+                     LittleDVDA.Expr
 
   Build-depends:     base       >= 4     && < 5,
                      hashable  >= 1.1 && < 1.2,
+                     hashtables >= 1.0.1,
                      containers >= 0.4 && < 0.5,
                      unordered-containers  >= 0.2 && < 0.3,
                      graphviz >= 2999.12 && < 2999.13,
@@ -107,7 +109,7 @@ flag test
   default:     False
 
 Test-suite test
-  type:		     exitcode-stdio-1.0
+  type:              exitcode-stdio-1.0
   hs-source-dirs:    .
   main-is:           TestMain.hs
   build-depends:     base,
